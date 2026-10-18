@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: #2f6feb;
+}
+
+* {
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.constellation-bg {
+  background-image: radial-gradient(
+      1px 1px at 20% 30%,
+      rgba(47, 111, 235, 0.55) 1px,
+      transparent 0
+    ),
+    radial-gradient(1px 1px at 70% 20%, rgba(47, 111, 235, 0.4) 1px, transparent 0),
+    radial-gradient(1.5px 1.5px at 40% 70%, rgba(47, 111, 235, 0.5) 1px, transparent 0),
+    radial-gradient(1px 1px at 85% 65%, rgba(47, 111, 235, 0.45) 1px, transparent 0),
+    radial-gradient(1px 1px at 10% 80%, rgba(47, 111, 235, 0.35) 1px, transparent 0);
+  background-repeat: no-repeat;
+}
+
+.aurora-amber {
+  background: radial-gradient(
+      ellipse 70% 60% at 15% 50%,
+      #e8831f 0%,
+      #c75a1a 28%,
+      #2a1a2e 55%,
+      #0c0b16 78%
+    ),
+    #0c0b16;
+  background-blend-mode: screen;
+}
