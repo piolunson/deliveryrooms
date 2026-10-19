@@ -9,7 +9,7 @@ const schema = z.object({
 });
 
 function generateTempPassword() {
-  // 12 znaków, czytelne (bez myślących podobnie O/0, l/1 itd.)
+  // 12 znaków, czytelne (bez mylących podobnie O/0, l/1 itd.)
   const chars = "ABCDEFGHJKMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789";
   return Array.from({ length: 12 }, () => chars[Math.floor(Math.random() * chars.length)]).join("");
 }
@@ -66,7 +66,7 @@ export async function POST(req: NextRequest) {
   }
 
   // W produkcji: wyślij tempPassword mailem przez Resend zamiast zwracać
-  // go w odpowiedzi API (tu zwracamy, żeby admin mógł go od razu skopiować
+  // go w odpowiedzi API (tu zwracamy, żeby admin mógł od razu skopiować
   // i przekazać koledze osobiście — zgodnie z tekstem "Konto utworzone...").
   return NextResponse.json({
     ok: true,
