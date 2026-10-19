@@ -46,13 +46,13 @@ export default function RoomDetailsPage() {
   }
 
   async function patch(body: Record<string, unknown>) {
-    await fetch(`/api/rooms/${id}`, { method: "PATCH", body: JSON.stringify(body) });
+    await fetch(`/api/rooms/manage/${id}`, { method: "PATCH", body: JSON.stringify(body) });
     load();
   }
 
   async function deleteRoom() {
     if (!confirm(t("roomDetails.deleteConfirm.title"))) return;
-    await fetch(`/api/rooms/${id}`, { method: "DELETE" });
+    await fetch(`/api/rooms/manage/${id}`, { method: "DELETE" });
     router.push("/app");
   }
 

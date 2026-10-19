@@ -101,7 +101,7 @@ export default function NewRoomWizard() {
         }
       }
 
-      const registerRes = await fetch(`/api/rooms/${roomId}/files`, {
+      const registerRes = await fetch(`/api/rooms/manage/${roomId}/files`, {
         method: "POST",
         body: JSON.stringify({
           storagePath: path,
@@ -150,7 +150,7 @@ export default function NewRoomWizard() {
     if (!roomId || !slug) return;
     setSaving(true);
 
-    await fetch(`/api/rooms/${roomId}`, {
+    await fetch(`/api/rooms/manage/${roomId}`, {
       method: "PATCH",
       body: JSON.stringify({
         title,
@@ -167,7 +167,7 @@ export default function NewRoomWizard() {
       }),
     });
 
-    await fetch(`/api/rooms/${roomId}`, {
+    await fetch(`/api/rooms/manage/${roomId}`, {
       method: "PATCH",
       body: JSON.stringify({ status: "active" }),
     });
