@@ -323,7 +323,7 @@ export const pl = {
     },
     error: {
       title: "Coś poszło nie tak",
-      subtitle: "Pracujemy nad tym. Odśwież stronę lub spróbuj za chwilę.",
+      subtitle: "Pracujemy nad tym. Odśwież stronę lub spróbuj ponownie za chwilę.",
       cta: "Odśwież",
     },
     offline: "Brak połączenia z internetem. Wysyłanie wznowi się automatycznie po powrocie sieci.",
